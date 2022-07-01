@@ -1,0 +1,5 @@
+celery:
+	celery -A spesific_app_name.celeryApp worker -l INFO
+
+celery_beats:
+	celery -A spesific_app_name.celeryApp beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
